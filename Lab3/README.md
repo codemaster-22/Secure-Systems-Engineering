@@ -1,6 +1,6 @@
 # ROP
 
-## Below are the steps used to solve the problem
+## Below are the gadgets used to solve the problem
 
 Gadgets we have used :
 
@@ -119,7 +119,7 @@ We have to fill the stack like this: with (ra) to main at top.
 0xffffd000   (some acccessible stack address)\
 0x08048480   (ra) corresponds to  pop edi;ret\
 0xffffd05e   (some acccessible stack address)\
-0x08048433   (ra) corresponds to pop esi ; ret\
+0x08048433   (ra) corresponds to pop esi ; ret
 
 
 
